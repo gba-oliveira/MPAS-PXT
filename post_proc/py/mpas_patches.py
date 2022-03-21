@@ -238,14 +238,14 @@ def plot_var_in_patch(var, patch_collection, label, title, outfile):
     bmap = Basemap(projection='cyl', 
                llcrnrlat=-90,
                urcrnrlat=90,
-               llcrnrlon=0,
-               urcrnrlon=360,
+               llcrnrlon=-180,
+               urcrnrlon=180,
                resolution='l')
 
     bmap.drawcoastlines()
 
     bmap.drawparallels(range(-90, 90, 30), linewidth=0.1, labels=[1,0,0,0], color='g')
-    bmap.drawmeridians(range(0, 360, 45), linewidth=0.1, labels=[0,0,0,1], color='g', rotation=45)
+    bmap.drawmeridians(range(-180, 180, 45), linewidth=0.1, labels=[0,0,0,1], color='g', rotation=45)
 
     color_map = cm.bwr
     

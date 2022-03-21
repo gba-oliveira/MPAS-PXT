@@ -130,7 +130,7 @@ patch_collection = get_mpas_patches(mesh, type=patchtype, pickleFile=None)
 Select levels and time instants for plotting
 '''
 levels = [1] #range(nlevels)
-times = range(ntimes)
+times = [3] #range(ntimes)
 for l in levels:
     for t in times:
 
